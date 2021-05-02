@@ -14,17 +14,17 @@ if [[ -z "$mac_os_name" ]]; then
   exit 1
 fi
 
-read -p "Delete all files in $HOME/Documents (y/n)? " documents
-if [[ "$documents" == "y" ]]; then
-  rm -rf $HOME/Documents/*
-  printf "%s\n" "Documents deleted."
-fi
-
-read -p "Delete all files in $HOME/Downloads (y/n)? " downloads
-if [[ "$downloads" == "y" ]]; then
-  rm -rf $HOME/Downloads/*
-  printf "%s\n" "Downloads deleted."
-fi
+# read -p "Delete all files in $HOME/Documents (y/n)? " documents
+# if [[ "$documents" == "y" ]]; then
+#   rm -rf $HOME/Documents/*
+#   printf "%s\n" "Documents deleted."
+# fi
+#
+# read -p "Delete all files in $HOME/Downloads (y/n)? " downloads
+# if [[ "$downloads" == "y" ]]; then
+#   rm -rf $HOME/Downloads/*
+#   printf "%s\n" "Downloads deleted."
+# fi
 
 printf "Setting system label and name...\n"
 sudo scutil --set ComputerName $mac_os_label

@@ -2,8 +2,8 @@
 
 # Applies system and application defaults.
 
-printf "%s\n" "System - Disable boot sound effects."
-sudo nvram SystemAudioVolume=" "
+#printf "%s\n" "System - Disable boot sound effects."
+#sudo nvram SystemAudioVolume=" "
 
 printf "%s\n" "System - Reveal IP address, hostname, OS version, etc. when clicking login window clock."
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
@@ -94,10 +94,10 @@ printf "%s\n" "Dock - Remove all default app icons."
 defaults write com.apple.dock persistent-apps -array
 
 printf "%s\n" "Dock - Automatically hide and show."
-defaults write com.apple.dock autohide -bool true
+#defaults write com.apple.dock autohide -bool true
 
 printf "%s\n" "Dock - Remove the auto-hiding delay."
-defaults write com.apple.Dock autohide-delay -float 0
+#defaults write com.apple.Dock autohide-delay -float 0
 
 printf "%s\n" "Dock - Don’t show Dashboard as a Space."
 defaults write com.apple.dock "dashboard-in-overlay" -bool true
@@ -213,3 +213,48 @@ defaults write com.apple.appstore WebKitDeveloperExtras -bool true
 
 printf "%s\n" "App Store - Enable Debug Menu in the Mac App Store."
 defaults write com.apple.appstore ShowDebugMenu -bool true
+
+# Additions
+
+printf "Dock - Position right\n"
+defaults write com.apple.dock orientation -string "right"
+
+printf "Spotlight - Disable Dictionary Lookup\n"
+defaults write com.apple.spotlight DictionaryLookupEnabled NO
+
+printf "Oxygen - allow\n"
+sudo xattr -dr com.apple.quarantine "/Applications/Oxygen XML Editor"
+
+printf "Oxygen - fix menu\n"
+defaults write ro.sync.exml.Oxygen AppleLanguages '(en)'
+
+printf "Disable natural scroll\n"
+defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+
+printf "Reduce size of Dock icons\n"
+defaults write com.apple.dock tilesize -integer 36
+
+printf "Set Dock magnification\n"
+defaults write com.apple.dock magnification -boolean true
+defaults write com.apple.dock largesize -float 86
+
+# Setup input sources to include Character Viewer & Keyboard Viewer
+#defaults delete com.apple.HIToolbox AppleEnabledInputSources
+#defaults write com.apple.HIToolbox AppleEnabledInputSources -array-add '{ "Bundle ID" = "com.apple.CharacterPaletteIM"; InputSourceKind = "Non Keyboard Input Method"; }'
+#defaults write com.apple.HIToolbox AppleEnabledInputSources -array-add '{ "Bundle ID" = "com.apple.KeyboardViewer"; InputSourceKind = "Non Keyboard Input Method"; }'
+
+# Remove duplicates in the “Open With” menu (also see `lscleanup` alias)
+/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
+
+# Make Dock icons of hidden applications translucent
+defaults write com.apple.dock showhidden -bool true
+
+# Show the full URL in the address bar (note: this still hides the scheme)
+defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
+
+# timezone support active by default
+defaults write com.apple.iCal "TimeZone support enabled" -bool true
+
+printf "Terminal - Set Homebrew as the default theme\n"
+defaults write com.apple.Terminal "Default Window Settings" -string "Homebrew"
+defaults write com.apple.Terminal "Startup Window Settings" -string "Homebrew"

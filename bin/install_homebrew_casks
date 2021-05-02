@@ -1,46 +1,57 @@
 #! /usr/bin/env bash
 
-# Installs Homebrew Casks.
+# Installs Homebrew casks.
 
-brew install --cask alfred
+# eXist-db: check for specific versions
+# brew install --cask exist-db
+
+# Oxygen XML Editor -- do manually because of M1
+# brew install --cask oxygen-xml-editor
+
+brew install --cask adguard
 brew install --cask appcleaner
-brew install --cask audio-hijack
-brew install --cask balenaetcher
+brew install --cask atom
 brew install --cask bartender
-brew install --cask beaker-browser
-brew install --cask carbon-copy-cloner
+brew install --cask bbedit
+brew install --cask bookends
+brew install --cask charles
 brew install --cask cleanshot
 brew install --cask clipgrab
 brew install --cask dash
-brew install --cask discord
-brew install --cask doxie
+brew install --cask docker
+brew install --cask dotnet
 brew install --cask dropbox
-brew install --cask firefox
-brew install --cask fission
+# firefix developer edition
+brew tap homebrew/cask-versions
+brew install --cask firefox-developer-edition
+brew install --cask forticlient
 brew install --cask google-chrome
-brew install --cask hazel
-brew install --cask imageoptim
+brew install --cask google-drive
 brew install --cask istat-menus
-brew install --cask iterm2
-brew install --cask ivpn
 brew install --cask ksdiff
-brew install --cask netnewswire
-brew install --cask micro-snitch
+brew install --cask moneymoney
 brew install --cask muzzle
-brew install --cask ngrok
-brew install --cask numi
-brew install --cask openoffice
-brew install --cask owasp-zap
-brew install --cask path-finder
+brew install --cask navicat-for-mysql
+brew install --cask omnidisksweeper
 brew install --cask paw
 brew install --cask pgadmin4
-brew install --cask pixelsnap
-brew install --cask resolutionator
-brew install --cask retrobatch
-brew install --cask signal
-brew install --cask spotify
-brew install --cask sublime-text
+brew install --cask powershell
+brew install --cask private-internet-access
+brew install --cask qlmarkdown
+brew install --cask qlstephen
+brew install --cask radio-silence
+brew install --cask skype
+brew install --cask torbrowser
 brew install --cask transmit
-brew install --cask viscosity
-brew install --cask visual-studio-code
+brew install --cask transmission
+brew install --cask ukelele
+brew install --cask unicodechecker
 brew install --cask vlc
+# fonts
+brew tap homebrew/cask-fonts
+brew install --cask font-fantasque-sans-mono
+# this istalls published versions
+# there is a beta version available of future v6
+brew install --cask font-gentium-book-basic
+brew install --cask font-gentium-basic
+brew install --cask font-gentium-plus

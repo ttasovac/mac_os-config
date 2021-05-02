@@ -2,13 +2,71 @@
 
 # Installs Dotfiles project.
 
-if [[ -z $(cat /etc/shells | grep "$(get_homebrew_bin_root)/bash") ]]; then
-  sudo bash -c "printf '$(get_homebrew_bin_root)/bash\n' >> /etc/shells"
-  chsh -s "$(get_homebrew_bin_root)/bash"
+# if [[ -z $(cat /etc/shells | grep "$(get_homebrew_bin_root)/bash") ]]; then
+#   sudo bash -c "printf '$(get_homebrew_bin_root)/bash\n' >> /etc/shells"
+#   chsh -s "$(get_homebrew_bin_root)/bash"
+#
+#   rm -f "$HOME/.bash_profile"
+#   install_git_project "https://github.com/bkuhlmann/dotfiles.git" $REPO_DOTFILES "dotfiles" "bin/run i"
+#   source "$HOME/.bashrc"
+# else
+#   printf "%s\n" "Dotfiles are installed."
+# fi
 
-  rm -f "$HOME/.bash_profile"
-  install_git_project "https://github.com/bkuhlmann/dotfiles.git" $REPO_DOTFILES "dotfiles" "bin/run i"
-  source "$HOME/.bashrc"
-else
-  printf "%s\n" "Dotfiles are installed."
+
+
+# Dotfiles set up
+
+if ! command -v fish &> /dev/null
+
+  # Remove Oh My Fish
+  rm -Rf /$HOME/.local/share/omf
+  #Install Oh My Fish
+  git clone https://github.com/oh-my-fish/oh-my-fish
+  cd oh-my-fish
+  bin/install --offline --noninteractive
+  rm -Rf $HOME/.config/omf
+  rm -Rf $HOME/.config/fish
+
+  ## this assumes the folder exists -- should check
+  echo "Moving to ttasovac-own..."
+  cd $HOME/Development/ttasovac-own
+  echo "Cloning dotfiles..."
+  git clone git@github.com:ttasovac/dotfiles.git
+
+  ln -s $HOME/Development/ttasovac-own/dotfiles/fish $HOME/.config/fish
+  ln -s $HOME/Development/ttasovac-own/dotfiles/omf $HOME/.config/omf
+
+  rm -Rf $HOME/.bashrc
+  rm -Rf $HOME/.bash
+  rm -f $HOME/.bash_profile
+  ln -s $HOME/Development/ttasovac-own/dotfiles/.bashrc $HOME/.bashrc
+  ln -s $HOME/Development/ttasovac-own/dotfiles/.bash $HOME/.bash
+  ln -s $HOME/Development/ttasovac-own/dotfiles/.bash_profile $HOME/.bash_profile
+
+  if [[ -z $(cat /etc/shells | grep "$(get_homebrew_bin_root)/fish") ]]; then
+    sudo bash -c "printf '$(get_homebrew_bin_root)/fish\n' >> /etc/shells"
+    chsh -s "$(get_homebrew_bin_root)/fish"
+  fi
+    printf "%s\n" "Dotfiles are installed."
+
+then
+    echo "To set up dotfiles, make sure you've installed fish (with brew)."
+    exit
 fi
+
+
+
+# TODO run omf in fish
+# omf install bobthefish
+
+ # Dotfiles Fish
+ # add fish to shells
+
+#  if ! grep -Fxq "/usr/local/bin/fish" /etc/shells
+#  then
+#      echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
+#  fi
+#
+# # make fish default
+# chsh -s /usr/local/bin/fish
