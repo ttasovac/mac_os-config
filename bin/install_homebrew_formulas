@@ -43,7 +43,7 @@ brew install dnsmasq
 # Fish
 brew install fish
 
-brew install glib --with-static
+brew install glib
 
 # Gawk
 brew install gawk
@@ -90,6 +90,9 @@ brew install lnav
 
 # Lynis
 brew install lynis
+
+# Mail Tracker Blocker
+brew install mailtrackerblocker
 
 # Maven
 brew install maven

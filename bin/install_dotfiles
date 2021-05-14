@@ -50,15 +50,21 @@ if ! command -v fish &> /dev/null
   fi
     printf "%s\n" "Dotfiles are installed."
 
-then
+  echo "Setting fish as default shell..."
+  chsh -s "$(get_homebrew_bin_root)/fish"
+
+  # fish path changed for M1, my old scripts list the old path in the shebang
+  # that's why 
+
+else
     echo "To set up dotfiles, make sure you've installed fish (with brew)."
     exit
 fi
 
 
 
-# TODO run omf in fish
-# omf install bobthefish
+# TODO in fish
+# omf theme default
 
  # Dotfiles Fish
  # add fish to shells

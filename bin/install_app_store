@@ -35,14 +35,17 @@ mas install 924726344
 # GarageBand
 # mas install 682658836
 
+# GoogleDrive
+mas install 507874739
+
 # Gradient
 # mas install 481981128
 
+# HP Smart
+mas install 1474276998
+
 # iMovie
 # mas install 408981434
-
-# Kaleidoscope
-mas install 587512244
 
 # Key Codes
 # mas install 414568915
@@ -118,6 +121,9 @@ mas install 728530824
 
 # Tadam
 mas install 531349534
+
+# Things
+mas install 904237743
 
 # Twitter
 mas install 409789998

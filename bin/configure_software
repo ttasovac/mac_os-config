@@ -7,3 +7,6 @@
   cd "$(get_homebrew_root)"
   git config --local core.hooksPath /dev/null
 )
+
+apm install sync-settings
+# will need to create a gist token and enter it together with gist id into sync-settings preferences 
