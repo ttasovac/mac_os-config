@@ -101,7 +101,7 @@ brew install maven
 brew install mas
 
 # Mysql - decide later
-# brew install mariadb
+brew install mariadb
 
 # Nginx
 brew install nginx
@@ -127,6 +127,11 @@ brew install peco
 # brew install homebrew/php/php56-mcrypt
 # brew install homebrew/php/php56-opcache
 # brew install homebrew/php/phpunit
+brew tap shivammathur/php
+brew install shivammathur/php/php@5.6
+brew install shivammathur/php/php@7.4
+
+
 
 #p7zip
 brew install p7zip
