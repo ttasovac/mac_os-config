@@ -166,6 +166,9 @@ brew install terminal-notifier
 # Tree
 brew install tree
 
+# Volta
+brew install volta
+
 # Watchman
 brew install watchman
 
