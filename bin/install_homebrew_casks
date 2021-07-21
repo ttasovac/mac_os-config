@@ -27,6 +27,7 @@ brew install --cask firefox-developer-edition
 brew install --cask forticlient
 brew install --cask google-chrome
 brew install --cask google-drive
+brew install --cask openrefine
 brew install --cask istat-menus
 brew install --cask ksdiff
 brew install --cask kaleidoscope

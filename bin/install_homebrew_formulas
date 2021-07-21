@@ -60,7 +60,8 @@ brew install git
 # GPG Agent
 #brew install gpg-agent
 
-brew install ggrep
+# grep will be installed as ggrep
+brew install grep
 
 # Htop
 brew install htop
