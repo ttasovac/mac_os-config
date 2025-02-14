@@ -6,4 +6,4 @@
 install_zip_app "$WALLET_APP_URL" "$WALLET_APP_NAME"
 
 #QNAPQfinderProMac
-install_dmg_pkg "$QNAP_APP_URL" "$QNAP_PATH" "$QNAP_APP_URL"
+#install_dmg_pkg "$QNAP_APP_URL" "$QNAP_PATH" "$QNAP_APP_URL"

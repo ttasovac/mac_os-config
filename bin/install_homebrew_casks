@@ -58,3 +58,4 @@ brew install --cask font-fantasque-sans-mono
 brew install --cask font-gentium-book-basic
 brew install --cask font-gentium-basic
 brew install --cask font-gentium-plus
+brew install --cask font-meslo-for-powerlevel10k

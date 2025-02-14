@@ -2,33 +2,24 @@
 
 # Installs Dotfiles project.
 
-# if [[ -z $(cat /etc/shells | grep "$(get_homebrew_bin_root)/bash") ]]; then
-#   sudo bash -c "printf '$(get_homebrew_bin_root)/bash\n' >> /etc/shells"
-#   chsh -s "$(get_homebrew_bin_root)/bash"
+if [[ -z $(cat /etc/shells | grep "$(get_homebrew_bin_root)/bash") ]]; then
+  sudo bash -c "printf '$(get_homebrew_bin_root)/bash\n' >> /etc/shells"
+  chsh -s "$(get_homebrew_bin_root)/bash"
 #
 #   rm -f "$HOME/.bash_profile"
 #   install_git_project "https://github.com/bkuhlmann/dotfiles.git" $REPO_DOTFILES "dotfiles" "bin/run i"
 #   source "$HOME/.bashrc"
 # else
 #   printf "%s\n" "Dotfiles are installed."
-# fi
+fi
 
 
 
 # Dotfiles set up
 
-if ! command -v fish &> /dev/null
+if [ -x "$(command -v fish)" ]; then
 
-  # Remove Oh My Fish
-  #rm -Rf /$HOME/.local/share/omf
-  #Install Oh My Fish
-  #git clone https://github.com/oh-my-fish/oh-my-fish
-  #cd oh-my-fish
-  #bin/install --offline --noninteractive
-  #rm -Rf $HOME/.config/omf
   rm -Rf $HOME/.config/fish
-
-  ## this assumes the folder exists -- should check
   mkdir -p $HOME/Development/ttasovac-own
   echo "Moving to ttasovac-own..."
   cd $HOME/Development/ttasovac-own
@@ -36,11 +27,11 @@ if ! command -v fish &> /dev/null
   git clone git@github.com:ttasovac/dotfiles.git
 
   ln -s $HOME/Development/ttasovac-own/dotfiles/fish $HOME/.config/fish
-  #ln -s $HOME/Development/ttasovac-own/dotfiles/omf $HOME/.config/omf
-
+ 
   rm -Rf $HOME/.bashrc
   rm -Rf $HOME/.bash
   rm -f $HOME/.bash_profile
+ 
   ln -s $HOME/Development/ttasovac-own/dotfiles/.bashrc $HOME/.bashrc
   ln -s $HOME/Development/ttasovac-own/dotfiles/.bash $HOME/.bash
   ln -s $HOME/Development/ttasovac-own/dotfiles/.bash_profile $HOME/.bash_profile
@@ -49,13 +40,10 @@ if ! command -v fish &> /dev/null
     sudo bash -c "printf '$(get_homebrew_bin_root)/fish\n' >> /etc/shells"
     chsh -s "$(get_homebrew_bin_root)/fish"
   fi
-    printf "%s\n" "Dotfiles are installed."
+  printf "%s\n" "Dotfiles are installed."
 
   echo "Setting fish as default shell..."
   chsh -s "$(get_homebrew_bin_root)/fish"
-
-  # fish path changed for M1, my old scripts list the old path in the shebang
-  # that's why 
 
 else
     echo "To set up dotfiles, make sure you've installed fish (with brew)."
@@ -63,17 +51,14 @@ else
 fi
 
 
-
 # TODO in fish
-# omf theme default
-
- # Dotfiles Fish
- # add fish to shells
-
-#  if ! grep -Fxq "/usr/local/bin/fish" /etc/shells
-#  then
-#      echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
-#  fi
-#
-# # make fish default
-# chsh -s /usr/local/bin/fish
+# i think fish setup is completely saved now in dotfiles
+# if not, consider
+# tide configure --auto --style=Rainbow --prompt_colors='True color'
+# --show_time='24-hour format' --rainbow_prompt_separators=Vertical
+# --powerline_prompt_heads=Sharp --powerline_prompt_tails=Flat
+# --powerline_prompt_style='Two lines, character and frame'
+# --prompt_connection=Disconnected --powerline_right_prompt_frame=Yes
+# --prompt_connection_andor_frame_color=Darkest --prompt_spacing=Compact
+# --icons='Few icons' --transient=No
+# after installing 

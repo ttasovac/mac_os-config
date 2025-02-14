@@ -19,9 +19,9 @@ export HOMEBREW_CURL_RETRIES=3
 export WALLET_APP_NAME="Wallet.app"
 export WALLET_APP_URL="https://www.acrylicapps.com/downloads/releases/Wallet_350.zip"
 
-export QNAP_APP_NAME="Qfinder Pro.app"
-export QNAP_APP_URL="https://download.qnap.com/Storage/Utility/QNAPQfinderProMac-7.5.0.0428.dmg"
-export QNAP_PATH="QNAPQfinderProMac-7.5.0.0428"
+# export QNAP_APP_NAME="Qfinder Pro.app"
+# export QNAP_APP_URL="https://download.qnap.com/Storage/Utility/QNAPQfinderProMac-7.5.0.0428.dmg"
+# export QNAP_PATH="QNAPQfinderProMac-7.5.0.0428"
 
 
 

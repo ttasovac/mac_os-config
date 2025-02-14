@@ -5,15 +5,15 @@
 # Readline
 # brew install readline
 
-# OpenSSL
-brew install openssl
+# OpenSSL rm 2025
+##brew install openssl
 
-# OpenSSL OSX CA
-brew tap raggi/ale
-brew install openssl-osx-ca
+# OpenSSL OSX CA rm 2025
+#brew tap raggi/ale
+#brew install openssl-osx-ca
 
-# asciinema
-brew install asciinema
+# asciinema rm 2025 -- dependency ca-certificates got stuck 
+# brew install asciinema
 
 # Ant
 brew install ant
@@ -43,13 +43,13 @@ brew install dnsmasq
 # Fish
 brew install fish
 
-brew install glib
+##brew install glib rm 2025
 
 # Gawk
 brew install gawk
 
-# GDBM
-brew install gdbm
+# GDBM rm 2025
+# brew install gdbm
 
 # Git
 brew install git
@@ -94,8 +94,10 @@ brew install lnav
 # Lynis
 brew install lynis
 
-# Mail Tracker Blocker
-brew install mailtrackerblocker
+# Mail Tracker Blocker rm2025 see
+# https://github.com/apparition47/MailTrackerBlockerApp?tab=readme-ov-file
+# but there is currently a bug
+#brew install mailtrackerblocker 
 
 # Maven
 brew install maven
@@ -139,8 +141,8 @@ brew install shivammathur/php/php@7.4
 #p7zip
 brew install p7zip
 
-# Python
-brew install python@3.9
+# Python rm 2025
+# brew install python@3.9
 
 # Redis
 # brew install redis
