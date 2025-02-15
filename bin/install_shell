@@ -2,17 +2,6 @@
 
 # Install dotfiles
 
-# Use Homebrew bash
-
-if [[ -z $(cat /etc/shells | grep "$(get_homebrew_bin_root)/bash") ]]; then
-  sudo bash -c "printf '$(get_homebrew_bin_root)/bash\n' >> /etc/shells"
-  chsh -s "$(get_homebrew_bin_root)/bash"
-fi
-
-
-
-# Dotfiles set up
-
 if [ -x "$(command -v fish)" ]; then
 
   rm -Rf $HOME/.config/fish
@@ -47,14 +36,16 @@ else
 fi
 
 
-# TODO in fish
-# i think fish setup is completely saved now in dotfiles
-# if not, consider
-# tide configure --auto --style=Rainbow --prompt_colors='True color'
-# --show_time='24-hour format' --rainbow_prompt_separators=Vertical
-# --powerline_prompt_heads=Sharp --powerline_prompt_tails=Flat
-# --powerline_prompt_style='Two lines, character and frame'
-# --prompt_connection=Disconnected --powerline_right_prompt_frame=Yes
-# --prompt_connection_andor_frame_color=Darkest --prompt_spacing=Compact
-# --icons='Few icons' --transient=No
-# after installing 
+# Use Homebrew bash
+
+if [[ -z $(cat /etc/shells | grep "$(get_homebrew_bin_root)/bash") ]]; then
+  sudo bash -c "printf '$(get_homebrew_bin_root)/bash\n' >> /etc/shells"
+  chsh -s "$(get_homebrew_bin_root)/bash"
+fi
+
+
+
+# Dotfiles set up
+
+
+
