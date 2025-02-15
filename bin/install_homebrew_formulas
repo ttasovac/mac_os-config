@@ -53,6 +53,8 @@ brew install gawk
 
 # Git
 brew install git
+brew install git-lfs
+git lfs install
 
 # GPG
 #brew install gpg

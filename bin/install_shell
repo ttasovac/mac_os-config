@@ -1,12 +1,12 @@
 #! /usr/bin/env bash
 
-# Install dotfiles
+# Install dotfiles & other github projects
 
 if [ ! -z "$(command -v fish)" ]; then
 
-  mkdir -p $HOME/Development/ttasovac-own
-  echo "Moving to ttasovac-own..."
-  cd $HOME/Development/ttasovac-own
+  mkdir -p $HOME/Development/ttasovac
+  echo "Moving to ttasovac..."
+  cd $HOME/Development/ttasovac
   echo "Cloning dotfiles..."
   git clone git@github.com:ttasovac/dotfiles.git
   printf "%s\n" "Dotfiles are installed."
@@ -15,7 +15,7 @@ if [ ! -z "$(command -v fish)" ]; then
 
   printf "%s\n" "Linking fish profiles to dotfiles"
   rm -Rf $HOME/.config/fish
-  ln -s $HOME/Development/ttasovac-own/dotfiles/fish $HOME/.config/fish
+  ln -s $HOME/Development/ttasovac/dotfiles/fish $HOME/.config/fish
 
   if [[ -z $(cat /etc/shells | grep "$(get_homebrew_bin_root)/fish") ]]; then
     sudo bash -c "printf '$(get_homebrew_bin_root)/fish\n' >> /etc/shells"
@@ -29,9 +29,9 @@ if [ ! -z "$(command -v fish)" ]; then
   rm -Rf $HOME/.bashrc
   rm -Rf $HOME/.bash
   rm -f $HOME/.bash_profile
-  ln -s $HOME/Development/ttasovac-own/dotfiles/.bashrc $HOME/.bashrc
-  ln -s $HOME/Development/ttasovac-own/dotfiles/.bash $HOME/.bash
-  ln -s $HOME/Development/ttasovac-own/dotfiles/.bash_profile $HOME/.bash_profile
+  ln -s $HOME/Development/ttasovac/dotfiles/.bashrc $HOME/.bashrc
+  ln -s $HOME/Development/ttasovac/dotfiles/.bash $HOME/.bash
+  ln -s $HOME/Development/ttasovac/dotfiles/.bash_profile $HOME/.bash_profile
 
   printf "%s\n" "Linking bash profiles to dotfiles"
   if [[ -z $(cat /etc/shells | grep "$(get_homebrew_bin_root)/bash") ]]; then
@@ -42,3 +42,132 @@ else
     echo "To set up dotfiles, make sure you've installed fish (with brew)."
     exit
 fi
+
+# Install main GitHub projects
+
+mkdir -p $HOME/Development/ttasovac
+mkdir -p $HOME/Development/BCDH
+mkdir -p $HOME/Development/DARIAH
+mkdir -p $HOME/Development/New-Languages-for-NLP
+
+cd $HOME/Development/BCDH
+# gh repo list BCDH -L 100 --json sshUrl --jq '.[].sshUrl' | LC_COLLATE=C sort --ignore-case | pbcopy
+gh repo clone git@github.com:BCDH/cadet.git
+gh repo clone git@github.com:BCDH/cql-module.git
+gh repo clone git@github.com:BCDH/cyrillicQWERTZ.git
+gh repo clone git@github.com:BCDH/dedavorifikator.git
+gh repo clone git@github.com:BCDH/exist-algolia-index.git
+gh repo clone git@github.com:BCDH/extended-serbian-keyboard.git
+# gh repo clone git@github.com:BCDH/language-mdxjs.git
+gh repo clone git@github.com:BCDH/Laravel-eXist-db-Client.git
+gh repo clone git@github.com:BCDH/Laravel-eXist-db-REST-Client.git
+gh repo clone git@github.com:BCDH/lemator.git
+# gh repo clone git@github.com:BCDH/lexica-latina.git
+gh repo clone git@github.com:BCDH/platforma-font.git
+# gh repo clone git@github.com:BCDH/ps-annotator.git
+gh repo clone git@github.com:BCDH/raskovnik-api.git
+gh repo clone git@github.com:BCDH/raskovnik-dictionaries.git
+# gh repo clone git@github.com:BCDH/rsanu.git
+# gh repo clone git@github.com:BCDH/slovo-app.git
+# gh repo clone git@github.com:BCDH/slovo-corpus.git
+gh repo clone git@github.com:BCDH/spacy-serbian-pipeline.git
+gh repo clone git@github.com:BCDH/standOffConverter4DARIAH-Campus.git
+gh repo clone git@github.com:BCDH/TEI-Annotator.git
+gh repo clone git@github.com:BCDH/TEI-Authorizer.git
+gh repo clone git@github.com:BCDH/TEI-Completer.git
+# gh repo clone git@github.com:BCDH/tei-lex-0-publisher-workshop.git
+# gh repo clone git@github.com:BCDH/TEI-Lisbon2019.git
+gh repo clone git@github.com:BCDH/tei-strip-and-include.git
+gh repo clone git@github.com:BCDH/transpoetika.git
+gh repo clone git@github.com:BCDH/upptime.git
+gh repo clone git@github.com:BCDH/yiddishQWERTZ.git
+
+cd $HOME/Development/ttasovac
+# gh repo clone git@github.com:ttasovac/ACL.git
+# gh repo clone git@github.com:ttasovac/alpine-mariadb-with-odbc.git
+# gh repo clone git@github.com:ttasovac/alta.git
+# gh repo clone git@github.com:ttasovac/apertium-hbs.git
+# gh repo clone git@github.com:ttasovac/api-blueprint.git
+# gh repo clone git@github.com:ttasovac/arabic_oxygen.git
+# gh repo clone git@github.com:ttasovac/awesome-algolia.git
+# gh repo clone git@github.com:ttasovac/bitnami-docker-mysql.git
+# gh repo clone git@github.com:ttasovac/campus.git
+# gh repo clone git@github.com:ttasovac/CETEIcean.git
+# gh repo clone git@github.com:ttasovac/cheatsheets.git
+gh repo clone git@github.com:ttasovac/cirilizator.git
+# gh repo clone git@github.com:ttasovac/COBALT.git
+# gh repo clone git@github.com:ttasovac/codimd-container.git
+# gh repo clone git@github.com:ttasovac/Course-Materials.git
+gh repo clone git@github.com:ttasovac/cspell-dicts.git
+# gh repo clone git@github.com:ttasovac/dariah-campus-mdx.git
+# gh repo clone git@github.com:ttasovac/dariah-campus.git
+gh repo clone git@github.com:ttasovac/dariah-rs.git
+# gh repo clone git@github.com:ttasovac/DiJeSt.git
+gh repo clone git@github.com:ttasovac/dotfiles.git
+# gh repo clone git@github.com:ttasovac/exist-backups.git
+gh repo clone git@github.com:ttasovac/exist-db-config.git
+gh repo clone git@github.com:ttasovac/eXist-Search-API.git
+gh repo clone git@github.com:ttasovac/existential-deployer.git
+# gh repo clone git@github.com:ttasovac/frd-working-data.git
+# gh repo clone git@github.com:ttasovac/gatsby-ceteicean-workshop.git
+# gh repo clone git@github.com:ttasovac/guidebook.git #New Languages
+# gh repo clone git@github.com:ttasovac/introduction-to-dictionaries.git
+gh repo clone git@github.com:ttasovac/izdanak-backend.git
+gh repo clone git@github.com:ttasovac/izdanak-data-config.git
+gh repo clone git@github.com:ttasovac/izdanak-modules.git
+gh repo clone git@github.com:ttasovac/korektor.git
+# gh repo clone git@github.com:ttasovac/lexica-latina.git
+# gh repo clone git@github.com:ttasovac/lexicalresources.git
+# gh repo clone git@github.com:ttasovac/lsgl.git
+gh repo clone git@github.com:ttasovac/mac_os-config.git
+# gh repo clone git@github.com:ttasovac/nanorc.git
+gh repo clone git@github.com:ttasovac/new-conversions4raskovnik.git
+gh repo clone git@github.com:ttasovac/notes.git
+# gh repo clone git@github.com:ttasovac/nova-humanistika-tei.git
+gh repo clone git@github.com:ttasovac/nova-humanistika.git
+gh repo clone git@github.com:ttasovac/platan-deployment.git
+gh repo clone git@github.com:ttasovac/platforma-glyphs.git
+# gh repo clone git@github.com:ttasovac/prism.git
+gh repo clone git@github.com:ttasovac/raskovnik-backend.git
+gh repo clone git@github.com:ttasovac/raskovnik-data-config.git
+gh repo clone git@github.com:ttasovac/raskovnik-dictionaries.git
+gh repo clone git@github.com:ttasovac/raskovnik-frontend.git
+gh repo clone git@github.com:ttasovac/reldi-tagger.git
+gh repo clone git@github.com:ttasovac/serbian-dictionary-based-lemmatizer.git
+# gh repo clone git@github.com:ttasovac/server.git #CodiMD
+# gh repo clone git@github.com:ttasovac/site-experiment.git
+gh repo clone git@github.com:ttasovac/slaws.multext.git
+# gh repo clone git@github.com:ttasovac/spacy-playground.git
+# gh repo clone git@github.com:ttasovac/spaCy.git
+# gh repo clone git@github.com:ttasovac/Spoon-Knife.git
+# gh repo clone git@github.com:ttasovac/stdfSpec.git
+gh repo clone git@github.com:ttasovac/Stylesheets.git
+gh repo clone git@github.com:ttasovac/tacheles.git
+gh repo clone git@github.com:ttasovac/TEI-Annotator-Data.git
+# gh repo clone git@github.com:ttasovac/TEI-Lisbon2019.git
+# gh repo clone git@github.com:ttasovac/tei-pynotator.git
+# gh repo clone git@github.com:ttasovac/TEI-stylesheets-test.git
+# gh repo clone git@github.com:ttasovac/trans-py-etika.git
+gh repo clone git@github.com:ttasovac/transpoetika-api.git
+gh repo clone git@github.com:ttasovac/transpoetika.git
+# gh repo clone git@github.com:ttasovac/ttasovac.github.io.git
+# gh repo clone git@github.com:ttasovac/unicode-regex-in-oxygen.git
+# gh repo clone git@github.com:ttasovac/voban-moneymoney.git
+# gh repo clone git@github.com:ttasovac/vscode-cspell-dict-extensions.git
+gh repo clone git@github.com:ttasovac/vscode-sertranslit.git
+gh repo clone git@github.com:ttasovac/vscode-spell-checker.git
+gh repo clone git@github.com:ttasovac/VSK-PDF.git
+gh repo clone git@github.com:ttasovac/VSK.P.git
+# gh repo clone git@github.com:ttasovac/VSK.SR.git
+# gh repo clone git@github.com:ttasovac/vuk-prepiska.git #P11
+# gh repo clone git@github.com:ttasovac/yiddish-notes.git #empty
+
+cd $HOME/Development/DARIAH
+gh repo clone git@github.com:DARIAH-ERIC/lexicalresources.git
+gh repo clone git@github.com:DARIAH-ERIC/dariah-campus.git
+gh repo clone git@github.com:TEIC/TEI.git
+
+cd $HOME/Development/New-Languages-for-NLP
+gh repo clone git@github.com:New-Languages-for-NLP/DARIAH-Campus.git $HOME/Development/New-Languages-for-NLP/course-for-DC
+gh repo clone git@github.com:New-Languages-for-NLP/yiddish.git
+
