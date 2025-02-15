@@ -2,50 +2,43 @@
 
 # Install dotfiles
 
-if [ -x "$(command -v fish)" ]; then
+if [ ! -z "$(command -v fish)" ]; then
 
-  rm -Rf $HOME/.config/fish
   mkdir -p $HOME/Development/ttasovac-own
   echo "Moving to ttasovac-own..."
   cd $HOME/Development/ttasovac-own
   echo "Cloning dotfiles..."
   git clone git@github.com:ttasovac/dotfiles.git
+  printf "%s\n" "Dotfiles are installed."
 
+  # Link fish profiles to dotfiles
+
+  printf "%s\n" "Linking fish profiles to dotfiles"
+  rm -Rf $HOME/.config/fish
   ln -s $HOME/Development/ttasovac-own/dotfiles/fish $HOME/.config/fish
- 
-  rm -Rf $HOME/.bashrc
-  rm -Rf $HOME/.bash
-  rm -f $HOME/.bash_profile
- 
-  ln -s $HOME/Development/ttasovac-own/dotfiles/.bashrc $HOME/.bashrc
-  ln -s $HOME/Development/ttasovac-own/dotfiles/.bash $HOME/.bash
-  ln -s $HOME/Development/ttasovac-own/dotfiles/.bash_profile $HOME/.bash_profile
 
   if [[ -z $(cat /etc/shells | grep "$(get_homebrew_bin_root)/fish") ]]; then
     sudo bash -c "printf '$(get_homebrew_bin_root)/fish\n' >> /etc/shells"
     chsh -s "$(get_homebrew_bin_root)/fish"
   fi
-  printf "%s\n" "Dotfiles are installed."
-
+  
   echo "Setting fish as default shell..."
   chsh -s "$(get_homebrew_bin_root)/fish"
+ 
+  # Link bash profiles to dotfiles
+  rm -Rf $HOME/.bashrc
+  rm -Rf $HOME/.bash
+  rm -f $HOME/.bash_profile
+  ln -s $HOME/Development/ttasovac-own/dotfiles/.bashrc $HOME/.bashrc
+  ln -s $HOME/Development/ttasovac-own/dotfiles/.bash $HOME/.bash
+  ln -s $HOME/Development/ttasovac-own/dotfiles/.bash_profile $HOME/.bash_profile
+
+  printf "%s\n" "Linking bash profiles to dotfiles"
+  if [[ -z $(cat /etc/shells | grep "$(get_homebrew_bin_root)/bash") ]]; then
+    sudo bash -c "printf '$(get_homebrew_bin_root)/bash\n' >> /etc/shells"
+  fi
 
 else
     echo "To set up dotfiles, make sure you've installed fish (with brew)."
     exit
 fi
-
-
-# Use Homebrew bash
-
-if [[ -z $(cat /etc/shells | grep "$(get_homebrew_bin_root)/bash") ]]; then
-  sudo bash -c "printf '$(get_homebrew_bin_root)/bash\n' >> /etc/shells"
-  chsh -s "$(get_homebrew_bin_root)/bash"
-fi
-
-
-
-# Dotfiles set up
-
-
-
