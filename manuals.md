@@ -26,3 +26,7 @@
 - `gh auth status`
 - `gh repo list`
 - i have a script check in bash and fish configs to make sure that the ssh agent is running
+
+## Misc
+
+- activate Cyrillic and Yiddish QWERTZ keyboards
