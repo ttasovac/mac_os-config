@@ -9,6 +9,8 @@ if [[ -z $(cat /etc/shells | grep "$(get_homebrew_bin_root)/bash") ]]; then
   chsh -s "$(get_homebrew_bin_root)/bash"
 fi
 
+
+
 # Dotfiles set up
 
 if [ -x "$(command -v fish)" ]; then

@@ -10,48 +10,47 @@
 
 brew install --cask adguard
 brew install --cask appcleaner
-brew install --cask atom
+# brew install --cask atom
 brew install --cask bartender
 brew install --cask bbedit
 brew install --cask bookends
 brew install --cask charles
 brew install --cask cleanshot
 brew install --cask clipgrab
-brew install --cask dash
+##brew install --cask dash
 brew install --cask docker
 brew install --cask dotnet
 brew install --cask dropbox
-# firefix developer edition
-brew tap homebrew/cask-versions
-brew install --cask firefox-developer-edition
-brew install --cask forticlient
+brew install --cask firefox@developer-edition
+brew install --cask folx
+# brew install --cask forticlient
 brew install --cask google-chrome
 brew install --cask google-drive
 brew install --cask openrefine
 brew install --cask istat-menus
-brew install --cask ksdiff
 brew install --cask kaleidoscope
 brew install --cask moneymoney
 brew install --cask muzzle
 brew install --cask navicat-for-mysql
+brew install --cask nordvpn
 brew install --cask omnidisksweeper
 brew install --cask papers
 brew install --cask paw
-brew install --cask pgadmin4
+# brew install --cask pgadmin4
 brew install --cask powershell
-brew install --cask private-internet-access
+# brew install --cask private-internet-access
 #brew install --cask qlmarkdown
 #brew install --cask qlstephen
 brew install --cask radio-silence
 brew install --cask skype
-brew install --cask torbrowser
+brew install --cask tailscale
+brew install --cask tor-browser
 brew install --cask transmit
 brew install --cask transmission
 brew install --cask ukelele
 brew install --cask unicodechecker
 brew install --cask vlc
 # fonts
-brew tap homebrew/cask-fonts
 brew install --cask font-fantasque-sans-mono
 # this istalls published versions
 # there is a beta version available of future v6
