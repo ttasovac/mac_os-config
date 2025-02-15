@@ -171,3 +171,7 @@ cd $HOME/Development/New-Languages-for-NLP
 gh repo clone git@github.com:New-Languages-for-NLP/DARIAH-Campus.git $HOME/Development/New-Languages-for-NLP/course-for-DC
 gh repo clone git@github.com:New-Languages-for-NLP/yiddish.git
 
+# Install keyboard layout
+
+cp -R $HOME/Development/BCDH/cyrillicQWERTZ/CyrillicQWERTZ.bundle $HOME/Library/Keyboard\ Layouts
+cp -R $HOME/Development/BCDH/yiddishQWERTZ/yiddishQWERTZ.bundle $HOME/Library/Keyboard\ Layouts
