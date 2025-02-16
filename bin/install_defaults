@@ -269,3 +269,4 @@ defaults write com.apple.Terminal "Startup Window Settings" -string "Homebrew"
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerTapGesture -int 2
 defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerTapGesture -int 2
 
+defaults write com.apple.Safari "WebKitPreferences.developerExtrasEnabled" -bool true

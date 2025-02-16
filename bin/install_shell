@@ -119,6 +119,7 @@ gh repo clone git@github.com:ttasovac/korektor.git
 # gh repo clone git@github.com:ttasovac/lexica-latina.git
 # gh repo clone git@github.com:ttasovac/lexicalresources.git
 # gh repo clone git@github.com:ttasovac/lsgl.git
+gh repo clone git@github.com:bkuhlmann/mac_os.git
 gh repo clone git@github.com:ttasovac/mac_os-config.git
 # gh repo clone git@github.com:ttasovac/nanorc.git
 gh repo clone git@github.com:ttasovac/new-conversions4raskovnik.git

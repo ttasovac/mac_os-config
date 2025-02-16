@@ -128,6 +128,9 @@ mas install 728530824
 # Tadam
 mas install 531349534
 
+# Tailscale
+mas install 1470499037
+
 # Things
 # mas install 904237743
 
@@ -143,8 +146,11 @@ mas install 425424353
 # WiFi Explorer
 # mas install 494803304
 
-# Whatsapp
-mas install 1147396723
+# Whatsap
+mas install 310633997
+
+# X
+mas install 333903271
 
 # Witch
 # mas install 412485838

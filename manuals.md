@@ -30,3 +30,5 @@
 ## Misc
 
 - activate Cyrillic and Yiddish QWERTZ keyboards
+- install Mellel
+- maybe install X (doesn't work with mas install at the moment because it's an iPad app)
