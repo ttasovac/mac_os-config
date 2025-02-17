@@ -11,6 +11,7 @@
 brew install --cask adguard
 brew install --cask appcleaner
 # brew install --cask atom
+brew install --cask bitwarden
 brew install --cask bartender
 brew install --cask bbedit
 brew install --cask bookends
@@ -26,6 +27,7 @@ brew install --cask folx
 # brew install --cask forticlient
 brew install --cask google-chrome
 brew install --cask google-drive
+brew install --cask herd
 brew install --cask openrefine
 brew install --cask istat-menus
 brew install --cask kaleidoscope

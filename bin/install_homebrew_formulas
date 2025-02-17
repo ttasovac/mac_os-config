@@ -5,8 +5,8 @@
 # Readline
 # brew install readline
 
-# OpenSSL rm 2025
-##brew install openssl
+# OpenSSL 
+brew install openssl
 
 # OpenSSL OSX CA rm 2025
 #brew tap raggi/ale
@@ -108,7 +108,7 @@ brew install maven
 brew install mas
 
 # Mysql - decide later
-brew install mariadb
+brew install mysql
 
 # Nginx
 brew install nginx
