@@ -151,7 +151,7 @@ brew install p7zip
 # brew install python@3.9
 
 # Redis
-# brew install redis
+brew install redis
 
 # Ruby Install
 brew install ruby-install ruby rbenv

@@ -43,7 +43,7 @@ In case of sock problems, make sure you:
 - `rm /opt/homebrew/etc/my.cnf`
 - `brew install mysql`
 
-# PHP
+## PHP
 
 - `code /opt/homebrew/etc/php/8.4/php-fpm.d/www.conf`
   - change user to `ttasovac`, and listen to `127.0.0.1:9084`
@@ -57,11 +57,56 @@ In case of sock problems, make sure you:
   - change user to `ttasovac`, and listen to `127.0.0.1:9080`
 - `code /opt/homebrew/etc/php/7.4/php-fpm.d/www.conf`
   - change user to `ttasovac`, and listen to `127.0.0.1:9074`
-- set 7.4 as default for now:
+- set 8.4 as default for now:
   - `brew unlink php`
-  - `brew link --overwrite --force php@7.4`
-  - `brew services start php@7.4`
-- dotfiles should already have aliases for each of the versions php74, php80 etc.
+  - `brew link --overwrite --force php@8.4`
+  - `brew services start php@8.4`
+- dotfiles should already have aliases for each of the versions php74, php80 etc. and function `phpv` to switch.
+
+Still todo: set up a cron task to clear php-fmp logs. See [here](https://kevdees.com/how-to-clear-php-fpm-logs-daily-on-macos/).
+
+## Nginx
+
+- `sudo nginx` to start
+- `sudo nginx -s stop`   # Signal the main process to stop
+- `sudo nginx -s reload` # Signal the main process to reload configuration
+- check <http://localhost:8080>
+- `cp ~/Development/ttasovac/dotfiles/nginx/nginx.conf /opt/homebrew/etc/nginx/nginx.conf`
+- `cp ~/Development/ttasovac/dotfiles/nginx/index.php /opt/homebrew/var/www/index.php`
+- `rm /opt/homebrew/var/www/index.html`
+- `mkdir /opt/homebrew/etc/nginx/servers`
+- `mkdir /opt/homebrew/etc/nginx/ssl`
+- `sudo nginx -s reload`
+- To also start on system boot, `sudo brew services start nginx`
+  
+I still didn't deal with SSL. Maybe [later](https://kevdees.com/install-nginx-amp-multiple-php-versions-on-macos-15-sequoia/).
+
+## Dnsmasq
+
+- `echo 'address=/.test/127.0.0.1' >> /opt/homebrew/etc/dnsmasq.conf`
+- `sudo mkdir -p /etc/resolver` (but it probably exists)
+- `sudo bash -c 'echo "nameserver 127.0.0.1" > /etc/resolver/test'`
+- `sudo brew services start dnsmasq`
+
+  ```shell
+  Warning: Taking root:admin ownership of some dnsmasq paths:
+    /opt/homebrew/Cellar/dnsmasq/2.90/sbin
+    /opt/homebrew/Cellar/dnsmasq/2.90/sbin/dnsmasq
+    /opt/homebrew/opt/dnsmasq
+    /opt/homebrew/opt/dnsmasq/sbin
+    /opt/homebrew/var/homebrew/linked/dnsmasq
+  This will require manual removal of these paths using `sudo rm` on brew upgrade/reinstall/uninstall.
+  ```
+  
+  - `ping test.test`
+
+## Mailpit
+
+If needed, see [here](https://kevdees.com/install-nginx-amp-multiple-php-versions-on-macos-15-sequoia/#mailpit).
+
+## Redis
+
+- `brew services start redis`
 
 ## Misc
 
