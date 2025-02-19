@@ -22,6 +22,7 @@ brew install --cask clipgrab
 brew install --cask docker
 brew install --cask dotnet
 brew install --cask dropbox
+brew install --cask exist-db
 brew install --cask firefox@developer-edition
 brew install --cask folx
 # brew install --cask forticlient
@@ -30,6 +31,8 @@ brew install --cask google-drive
 brew install --cask herd
 brew install --cask openrefine
 brew install --cask istat-menus
+# Java 8 (Eclipse Temurin)
+brew install --cask temurin@8
 brew install --cask kaleidoscope
 brew install --cask moneymoney
 brew install --cask muzzle

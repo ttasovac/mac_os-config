@@ -7,5 +7,9 @@ install_zip_app "$WALLET_APP_URL" "$WALLET_APP_NAME"
 
 install_bare_pkg "https://moneymoney-app.com/download/MoneyMoney.pkg" "MoneyMoney"
 
+
+eXist-db-6.3.0.dmg
+https://github.com/eXist-db/exist/releases/download/eXist-6.3.0/eXist-db-6.3.0.dmg
+
 #QNAPQfinderProMac
 #install_dmg_pkg "$QNAP_APP_URL" "$QNAP_PATH" "$QNAP_APP_URL"

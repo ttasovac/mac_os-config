@@ -29,7 +29,7 @@ brew install ccat
 
 # Composer dependancy manage for php
 # Install later when you decide on PHP deafult reqs
-# brew install composer
+brew install composer
 
 # CTags
 brew install ctags

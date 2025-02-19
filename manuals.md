@@ -90,6 +90,21 @@ Still todo: set up a cron task to clear php-fmp logs. See [here](https://kevdees
 - `sudo nginx -s reload`
 - To also start on system boot, `sudo brew services start nginx`
   
+  ```shell
+  sudo brew services start nginx     ✔   stable
+  Warning: Taking root:admin ownership of some nginx paths:
+    /opt/homebrew/Cellar/nginx/1.27.4/bin
+    /opt/homebrew/Cellar/nginx/1.27.4/bin/nginx
+    /opt/homebrew/opt/nginx
+    /opt/homebrew/opt/nginx/bin
+    /opt/homebrew/var/homebrew/linked/nginx
+  This will require manual removal of these paths using `sudo rm` on
+  brew upgrade/reinstall/uninstall.
+  Warning: nginx must be run as non-root to start at user login!
+  ==> Successfully started `nginx` (label: homebrew.mxcl.nginx)
+  ```
+
+
 I still didn't deal with SSL. Maybe [later](https://kevdees.com/install-nginx-amp-multiple-php-versions-on-macos-15-sequoia/).
 
 ## Dnsmasq
