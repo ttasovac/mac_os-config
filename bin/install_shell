@@ -121,6 +121,7 @@ gh repo clone git@github.com:ttasovac/korektor.git
 # gh repo clone git@github.com:ttasovac/lsgl.git
 gh repo clone git@github.com:bkuhlmann/mac_os.git
 gh repo clone git@github.com:ttasovac/mac_os-config.git
+gh repo clone git@github.com:fboender/multi-git-status.git
 # gh repo clone git@github.com:ttasovac/nanorc.git
 gh repo clone git@github.com:ttasovac/new-conversions4raskovnik.git
 gh repo clone git@github.com:ttasovac/notes.git
@@ -176,3 +177,10 @@ gh repo clone git@github.com:New-Languages-for-NLP/yiddish.git
 
 cp -R $HOME/Development/BCDH/cyrillicQWERTZ/CyrillicQWERTZ.bundle $HOME/Library/Keyboard\ Layouts
 cp -R $HOME/Development/BCDH/yiddishQWERTZ/yiddishQWERTZ.bundle $HOME/Library/Keyboard\ Layouts
+
+# Install multi-git-status
+echo "Installing multi-git-status..."
+cd /Users/ttasovac/Development/ttasovac/multi-git-status
+sudo make install
+cd ..
+mgitstatus 

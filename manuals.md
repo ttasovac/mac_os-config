@@ -30,8 +30,19 @@
 
 ## mysql
 
-- `brew services start mysql`
+- `brew services start mysql@8.4`
 - `brew services list`
+- `ln -s /opt/homebrew/opt/mysql@8.4 /opt/homebrew/opt/mysql`
+- `code /opt/homebrew/etc/my.cnf`:
+  
+  ```sql
+  [mysqld]
+  # Only allow connections from localhost
+  bind-address = 127.0.0.1
+  mysqlx-bind-address = 127.0.0.1
+  mysql_native_password=ON
+  ```  
+
 - `mysql_secure_installation`
 
 In case of sock problems, make sure you:
@@ -114,4 +125,5 @@ If needed, see [here](https://kevdees.com/install-nginx-amp-multiple-php-version
 - change keyboard selection to cmd-space, and next: ctrl-command space
 - change spotlight to option space
 - install Mellel
+- set up Bartender
 - maybe install X (doesn't work with mas install at the moment because it's an iPad app)
