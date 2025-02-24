@@ -270,3 +270,8 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeF
 defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerTapGesture -int 2
 
 defaults write com.apple.Safari "WebKitPreferences.developerExtrasEnabled" -bool true
+
+# Turn off autocorrect 
+defaults write -g NSAutomaticSpellingCorrectionEnabled -bool true
+
+
