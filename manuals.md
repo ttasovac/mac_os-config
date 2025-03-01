@@ -152,12 +152,14 @@ If needed, see [here](https://kevdees.com/install-nginx-amp-multiple-php-version
 
 ## Issues with tide
 
-If there are issues with tide and fish_variables being constantly updated, despite `$HOME/.gitconfig`  and `$HOME/Development/ttasovac/dotfiles/fish.gitattributes` being set properly, do:
+If there are issues with tide and fish_variables being constantly updated, despite `$HOME/.gitconfig`  and `$HOME/Development/ttasovac/dotfiles/fish.gitattributes` being set properly, do, in `dotfiles`:
 
 ```shell
 - rm -rf*
 - git reset --hard
 ```
+
+then commit `fish_variables` once
 
 ## Misc
 
