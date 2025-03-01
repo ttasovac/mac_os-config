@@ -17,6 +17,18 @@ if [ ! -z "$(command -v fish)" ]; then
   rm -Rf $HOME/.config/fish
   ln -s $HOME/Development/ttasovac/dotfiles/fish $HOME/.config/fish
 
+  # this is a backup for tide constantly updating fish_variables
+  # TODO: create a fishsnap function that will do the reverse
+  # I should run it after making substantial changes to tide? 
+  cp $HOME/.config/fish/fish_variables.snapshot $HOME/.config/fish/fish_variables
+
+  # add to .gitconfig
+  # to fix issues with tide and fish_variables
+  echo >>$HOME/.gitconfig \n"[filter \"cleanFishVars\"]
+	clean = awk '!/SETUVAR _.*/{print}'
+[diff \"fish_variables\"]
+	textconv = awk '!/SETUVAR _.*/{print}'"
+
   if [[ -z $(cat /etc/shells | grep "$(get_homebrew_bin_root)/fish") ]]; then
     sudo bash -c "printf '$(get_homebrew_bin_root)/fish\n' >> /etc/shells"
     chsh -s "$(get_homebrew_bin_root)/fish"

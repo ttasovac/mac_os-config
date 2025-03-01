@@ -1,5 +1,22 @@
 # Manual setups
 
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [Manual setups](#manual-setups)
+  - [SSH keys](#ssh-keys)
+  - [mysql](#mysql)
+  - [PHP](#php)
+  - [Nginx](#nginx)
+  - [Dnsmasq](#dnsmasq)
+  - [Mailpit](#mailpit)
+  - [Redis](#redis)
+  - [Issues with tide](#issues-with-tide)
+  - [Misc](#misc)
+
+<!-- /code_chunk_output -->
+
 ## SSH keys
 
 - `ssh-keygen -t ed25519 -C "ttasovac+2025@humanistika.org"`
@@ -18,7 +35,7 @@
   IdentityFile ~/.ssh/ttasovac+2025@humanistika.org
   ```
 
-- `ssh-add --apple-use-keychain ~/.ssh/ttasovac+2025@humanistika.org`
+- `ssh-add --apple-use-keychain ~/.ssh/ttasovac+2025@humanistika.org`g
 
 - `gh auth status`
 - if logged in, gh auth logout
@@ -104,7 +121,6 @@ Still todo: set up a cron task to clear php-fmp logs. See [here](https://kevdees
   ==> Successfully started `nginx` (label: homebrew.mxcl.nginx)
   ```
 
-
 I still didn't deal with SSL. Maybe [later](https://kevdees.com/install-nginx-amp-multiple-php-versions-on-macos-15-sequoia/).
 
 ## Dnsmasq
@@ -133,6 +149,15 @@ If needed, see [here](https://kevdees.com/install-nginx-amp-multiple-php-version
 ## Redis
 
 - `brew services start redis`
+
+## Issues with tide
+
+If there are issues with tide and fish_variables being constantly updated, despite `$HOME/.gitconfig`  and `$HOME/Development/ttasovac/dotfiles/fish.gitattributes` being set properly, do:
+
+```shell
+- rm -rf*
+- git reset --hard
+```
 
 ## Misc
 
