@@ -7,6 +7,7 @@ install_zip_app "$WALLET_APP_URL" "$WALLET_APP_NAME"
 
 install_bare_pkg "https://moneymoney-app.com/download/MoneyMoney.pkg" "MoneyMoney"
 
+install_dmg_app "https://persistent.oaistatic.com/sidekick/public/ChatGPT.dmg" "ChatGPT Installer" "ChatGPT.app"
 
 #QNAPQfinderProMac
 #install_dmg_pkg "$QNAP_APP_URL" "$QNAP_PATH" "$QNAP_APP_URL"
