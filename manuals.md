@@ -27,7 +27,7 @@ to make the rest of the script finish, we need this after installing brew
 
 ## fish
 
-- better to install manually
+- issue at dariahmini was probably because i didn't turn fish_variables.snapshot into fish_variables. try that first. if it doesn't work, then:  
 - configure tide manually
 - symlink manually
 - all of the above before install_shell
