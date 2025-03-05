@@ -8,12 +8,13 @@
 # Oxygen XML Editor -- do manually because of M1
 # brew install --cask oxygen-xml-editor
 
-brew install --cask adguard
+# brew install --cask adguard
 brew install --cask appcleaner
 # brew install --cask atom
 brew install --cask bitwarden
 brew install --cask bartender
 brew install --cask bbedit
+brew install --cask beeper
 brew install --cask bookends
 brew install --cask charles
 brew install --cask cleanshot
@@ -30,6 +31,7 @@ brew install --cask google-chrome
 brew install --cask google-drive
 brew install --cask herd
 brew install --cask openrefine
+brew install --cask oxygen-xml-editor
 brew install --cask istat-menus
 # Java 8 (Eclipse Temurin)
 brew install --cask temurin@8

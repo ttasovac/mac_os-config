@@ -5,6 +5,8 @@
 <!-- code_chunk_output -->
 
 - [Manual setups](#manual-setups)
+  - [zsh](#zsh)
+  - [fish](#fish)
   - [SSH keys](#ssh-keys)
   - [mysql](#mysql)
   - [PHP](#php)
@@ -17,11 +19,24 @@
 
 <!-- /code_chunk_output -->
 
+## zsh
+
+to make the rest of the script finish, we need this after installing brew
+
+`export PATH="/opt/homebrew/bin:$PATH" >> ~/.zshrc`
+
+## fish
+
+- better to install manually
+- configure tide manually
+- symlink manually
+- all of the above before install_shell
+
 ## SSH keys
 
 - `ssh-keygen -t ed25519 -C "ttasovac+2025@humanistika.org"`
-- `ssh-keygen -t ed25519 -C "ttasovac+2025@humanistika.org"`
-- filename: `ttasovac+2025@humanistika.org` (pub will have .pub)
+- `ssh-keygen -t ed25519 -C "ttasovac+2025@dariahmini"`
+- filename: `ttasovac+2025@humanistika.org` (pub will have .pub); make sure it's saved inside .ssh
 - enter passphrase
 - `open ~/.ssh/config`  to check if config file exists; if not:
 - `touch ~/.ssh/config`
@@ -35,7 +50,7 @@
   IdentityFile ~/.ssh/ttasovac+2025@humanistika.org
   ```
 
-- `ssh-add --apple-use-keychain ~/.ssh/ttasovac+2025@humanistika.org`g
+- `ssh-add --apple-use-keychain ~/.ssh/ttasovac+2025@humanistika.org`
 
 - `gh auth status`
 - if logged in, gh auth logout

@@ -62,6 +62,9 @@ git lfs install
 # GPG Agent
 #brew install gpg-agent
 
+# GitHub
+brew install gh
+
 # grep will be installed as ggrep
 brew install grep
 
@@ -109,6 +112,9 @@ brew install mas
 
 # Mysql - decide later
 brew install mysql
+
+# Nerd font for shell
+brew install font-hack-nerd-font
 
 # Nginx
 brew install nginx

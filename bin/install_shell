@@ -16,6 +16,7 @@ if [ ! -z "$(command -v fish)" ]; then
   printf "%s\n" "Linking fish profiles to dotfiles"
   rm -Rf $HOME/.config/fish
   ln -s $HOME/Development/ttasovac/dotfiles/fish $HOME/.config/fish
+  
 
   # this is a backup for tide constantly updating fish_variables
   # TODO: use fishsnapvars function to do the reverse
@@ -64,7 +65,6 @@ mkdir -p $HOME/Development/DARIAH
 mkdir -p $HOME/Development/New-Languages-for-NLP
 
 cd $HOME/Development/BCDH
-# gh repo list BCDH -L 100 --json sshUrl --jq '.[].sshUrl' | LC_COLLATE=C sort --ignore-case | pbcopy
 gh repo clone git@github.com:BCDH/cadet.git
 gh repo clone git@github.com:BCDH/cql-module.git
 gh repo clone git@github.com:BCDH/cyrillicQWERTZ.git
@@ -197,3 +197,6 @@ cd /Users/ttasovac/Development/ttasovac/multi-git-status
 sudo make install
 cd ..
 mgitstatus 
+
+echo .DS_Store >> ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
