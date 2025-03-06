@@ -36,6 +36,7 @@ to make the rest of the script finish, we need this after installing brew
 
 - `ssh-keygen -t ed25519 -C "ttasovac+2025@humanistika.org"`
 - `ssh-keygen -t ed25519 -C "ttasovac+2025@dariahmini"`
+- `ssh-keygen -t ed25519 -C "platan+2025@dariahmini"`
 - filename: `ttasovac+2025@humanistika.org` (pub will have .pub); make sure it's saved inside .ssh
 - enter passphrase
 - `open ~/.ssh/config`  to check if config file exists; if not:

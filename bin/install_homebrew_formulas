@@ -111,7 +111,7 @@ brew install maven
 brew install mas
 
 # Mysql - decide later
-brew install mysql
+brew install mysql@8.4
 
 # Nerd font for shell
 brew install font-hack-nerd-font
