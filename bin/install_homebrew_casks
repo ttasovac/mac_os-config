@@ -30,6 +30,8 @@ brew install --cask folx
 brew install --cask google-chrome
 brew install --cask google-drive
 brew install --cask herd
+brew install --cask mellel
+brew install --cask microsoft-office
 brew install --cask openrefine
 brew install --cask oxygen-xml-editor
 brew install --cask istat-menus

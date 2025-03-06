@@ -27,7 +27,7 @@ to make the rest of the script finish, we need this after installing brew
 
 ## fish
 
-- issue at dariahmini was probably because i didn't turn fish_variables.snapshot into fish_variables. try that first. if it doesn't work, then:  
+- issue at dariahmini was probably because i didn't turn fish_variables.snapshot into fish_variables. try that first. if it doesn't work, then:
 - configure tide manually
 - symlink manually
 - all of the above before install_shell
@@ -181,6 +181,5 @@ then commit `fish_variables` once
 - activate Cyrillic and Yiddish QWERTZ keyboards
 - change keyboard selection to cmd-space, and next: ctrl-command space
 - change spotlight to option space
-- install Mellel
 - set up Bartender
 - maybe install X (doesn't work with mas install at the moment because it's an iPad app)
