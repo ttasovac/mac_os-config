@@ -32,6 +32,7 @@ to make the rest of the script finish, we need this after installing brew
 
 ## fish
 
+- make sure you manually set the font in Terminal to MesloLGS NF Regular (will be installed with shells)
 - issue at dariahmini was probably because i didn't turn fish_variables.snapshot into fish_variables. try that first. if it doesn't work, then:
 - configure tide manually
 - symlink manually
@@ -95,37 +96,39 @@ In case of sock problems, make sure you:
 ## PHP
 
 - `code /opt/homebrew/etc/php/8.4/php-fpm.d/www.conf`
-  - change user to `ttasovac`, and listen to `127.0.0.1:9084`
+  - change user to `ttasovac`, and group to `staff`, and listen to `127.0.0.1:9084`
 - `code /opt/homebrew/etc/php/8.3/php-fpm.d/www.conf`
-  - change user to `ttasovac`, and listen to `127.0.0.1:9083`
+  - change user to `ttasovac`, and group to `staff`, and listen to `127.0.0.1:9083`
 - `code /opt/homebrew/etc/php/8.2/php-fpm.d/www.conf`
-  - change user to `ttasovac`, and listen to `127.0.0.1:9082`
+  - change user to `ttasovac`, and group to `staff`, and listen to `127.0.0.1:9082`
 - `code /opt/homebrew/etc/php/8.1/php-fpm.d/www.conf`
-  - change user to `ttasovac`, and listen to `127.0.0.1:9081`
+  - change user to `ttasovac`, and group to `staff`, and listen to `127.0.0.1:9081`
 - `code /opt/homebrew/etc/php/8.0/php-fpm.d/www.conf`
   - change user to `ttasovac`, and listen to `127.0.0.1:9080`
 - `code /opt/homebrew/etc/php/7.4/php-fpm.d/www.conf`
-  - change user to `ttasovac`, and listen to `127.0.0.1:9074`
+  - change user to `ttasovac`, and group to `staff`, and listen to `127.0.0.1:9074`
 - set 8.4 as default for now:
   - `brew unlink php`
   - `brew link --overwrite --force php@8.4`
   - `brew services start php@8.4`
+- current raskovnik requires `brew services start php@7.4`
 - dotfiles should already have aliases for each of the versions php74, php80 etc. and function `phpv` to switch.
 
 Still todo: set up a cron task to clear php-fmp logs. See [here](https://kevdees.com/how-to-clear-php-fpm-logs-daily-on-macos/).
 
 ## Nginx
 
-- `sudo nginx` to start
-- `sudo nginx -s stop`   # Signal the main process to stop
-- `sudo nginx -s reload` # Signal the main process to reload configuration
+- `sudo brew services start nginx` to start
+- `sudo brew services stop nginx`   # Signal the main process to stop
+- `sudo brew services restart nginx` # Signal the main process to reload configuration
 - check <http://localhost:8080>
 - `cp ~/Development/ttasovac/dotfiles/nginx/nginx.conf /opt/homebrew/etc/nginx/nginx.conf`
 - `cp ~/Development/ttasovac/dotfiles/nginx/index.php /opt/homebrew/var/www/index.php`
 - `rm /opt/homebrew/var/www/index.html`
-- `mkdir /opt/homebrew/etc/nginx/servers`
+- `mkdir /opt/homebrew/etc/nginx/servers` ! file exists!
 - `mkdir /opt/homebrew/etc/nginx/ssl`
 - `sudo nginx -s reload`
+- check <http://localhost>
 - To also start on system boot, `sudo brew services start nginx`
   
   ```shell
