@@ -6,6 +6,7 @@
 
 - [Manual setups](#manual-setups)
   - [zsh](#zsh)
+  - [Full access](#full-access)
   - [fish](#fish)
   - [SSH keys](#ssh-keys)
   - [mysql](#mysql)
@@ -24,6 +25,10 @@
 to make the rest of the script finish, we need this after installing brew
 
 `export PATH="/opt/homebrew/bin:$PATH" >> ~/.zshrc`
+
+## Full access
+
+- give Terminal app full access to disk in Privacy & Confidentiality / Disk Access (otherwise Safari, Mail etc. defualts won't write)
 
 ## fish
 
