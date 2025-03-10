@@ -191,4 +191,5 @@ then commit `fish_variables` once
 - change keyboard selection to cmd-space, and next: ctrl-command space
 - change spotlight to option space
 - set up Bartender
+- allow screen sharing: Apple menu > System Settings > General > Общий экран
 - maybe install X (doesn't work with mas install at the moment because it's an iPad app)

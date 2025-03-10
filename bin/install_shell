@@ -191,6 +191,12 @@ gh repo clone git@github.com:New-Languages-for-NLP/yiddish.git
 cp -R $HOME/Development/BCDH/cyrillicQWERTZ/CyrillicQWERTZ.bundle $HOME/Library/Keyboard\ Layouts
 cp -R $HOME/Development/BCDH/yiddishQWERTZ/yiddishQWERTZ.bundle $HOME/Library/Keyboard\ Layouts
 
+echo "Allow eXist-db..."
+sudo xattr -dr com.apple.quarantine "/Applications/eXist-db.app/" 
+
+echo "Allow oXygen..."
+sudo xattr -dr com.apple.quarantine "/Applications/Oxygen XML Editor"
+
 # Install multi-git-status
 echo "Installing multi-git-status..."
 cd /Users/ttasovac/Development/ttasovac/multi-git-status
