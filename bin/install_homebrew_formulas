@@ -149,6 +149,8 @@ brew install shivammathur/php/php@8.2
 brew install shivammathur/php/php@8.3
 brew install shivammathur/php/php@8.4
 
+# pnpm
+brew install pnpm  
 
 #p7zip
 brew install p7zip
