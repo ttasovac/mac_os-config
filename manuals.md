@@ -188,6 +188,7 @@ then commit `fish_variables` once
 ## Misc
 
 - activate Cyrillic and Yiddish QWERTZ keyboards
+- install rsanu.dictionary from Dropbox to ttasovac/Library/Dictionaries; make sure it's readable by everybody
 - change keyboard selection to cmd-space, and next: ctrl-command space
 - change spotlight to option space
 - set up Bartender
