@@ -162,7 +162,8 @@ brew install p7zip
 brew install redis
 
 # Ruby Install
-brew install ruby-install ruby rbenv
+# chruby works only in bash
+brew install ruby-install chruby chruby-fish
 
 # Saxon
 brew install saxon

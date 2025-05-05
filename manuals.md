@@ -5,6 +5,7 @@
 <!-- code_chunk_output -->
 
 - [Manual setups](#manual-setups)
+  - [Before install](#before-install)
   - [zsh](#zsh)
   - [Full access](#full-access)
   - [fish](#fish)
@@ -19,6 +20,15 @@
   - [Misc](#misc)
 
 <!-- /code_chunk_output -->
+
+## Before install
+
+- Install Github Desktop
+  - sign in
+  - clone notes
+- Install VSCode
+  - turn on cloud changes
+  - sign in with github
 
 ## zsh
 

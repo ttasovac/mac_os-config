@@ -204,5 +204,9 @@ sudo make install
 cd ..
 mgitstatus 
 
+# install latest ruby
+ruby-install 3.4.3
+echo "3.4.3" > $HOME/.ruby-version
+
 echo .DS_Store >> ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
