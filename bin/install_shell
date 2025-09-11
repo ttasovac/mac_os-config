@@ -191,6 +191,12 @@ gh repo clone git@github.com:New-Languages-for-NLP/yiddish.git
 cp -R $HOME/Development/BCDH/cyrillicQWERTZ/CyrillicQWERTZ.bundle $HOME/Library/Keyboard\ Layouts
 cp -R $HOME/Development/BCDH/yiddishQWERTZ/yiddishQWERTZ.bundle $HOME/Library/Keyboard\ Layouts
 
+# Install Platforma Sans font
+
+cp -R $HOME/Development/BCDH/platforma-font/PlatformaSans-Bold.ttf $HOME/Library/Fonts
+cp -R $HOME/Development/BCDH/platforma-font/PlatformaSans-Italic.ttf $HOME/Library/Fonts
+cp -R $HOME/Development/BCDH/platforma-font/PlatformaSans-Regular.ttf $HOME/Library/Fonts
+
 echo "Allow eXist-db..."
 sudo xattr -dr com.apple.quarantine "/Applications/eXist-db.app/" 
 
