@@ -40,6 +40,9 @@ brew install diff-so-fancy
 #dnsmasq
 brew install dnsmasq
 
+# espanso (text expander)
+brew install espanso
+
 # Fish
 brew install fish
 
@@ -109,6 +112,9 @@ brew install maven
 
 # Mac App Store CLI
 brew install mas
+
+# Monomakh Unicode
+brew install --cask font-monomakh
 
 # Mysql - decide later
 brew install mysql@8.4
