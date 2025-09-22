@@ -65,6 +65,7 @@ brew install --cask vlc
 brew install --cask zoom
 brew install --cask zotero
 # fonts
+brew install --cask font-bukyvede-regular
 brew install --cask font-fantasque-sans-mono
 # this istalls published versions
 # there is a beta version available of future v6
