@@ -163,7 +163,7 @@ brew install redis
 
 # Ruby Install
 # chruby works only in bash
-brew install ruby-install chruby chruby-fish
+brew install rbenv ruby-install chruby chruby-fish
 
 # Saxon
 brew install saxon

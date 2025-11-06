@@ -42,7 +42,8 @@ brew install --cask tropy
 brew install --cask kaleidoscope
 brew install --cask moneymoney
 brew install --cask muzzle
-brew install --cask navicat-for-mysql
+brew install --cask mysqlworkbench
+#brew install --cask navicat-for-mysql
 brew install --cask nordvpn
 brew install --cask omnidisksweeper
 brew install --cask papers
