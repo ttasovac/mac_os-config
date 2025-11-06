@@ -54,7 +54,6 @@ brew install --cask powershell
 #brew install --cask qlmarkdown
 #brew install --cask qlstephen
 brew install --cask radio-silence
-brew install --cask skype
 brew install --cask tailscale
 brew install --cask tor-browser
 brew install --cask transmit
@@ -66,6 +65,7 @@ brew install --cask vlc
 brew install --cask zoom
 brew install --cask zotero
 # fonts
+brew install --cask font-bukyvede-regular
 brew install --cask font-fantasque-sans-mono
 # this istalls published versions
 # there is a beta version available of future v6
