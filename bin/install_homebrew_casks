@@ -20,6 +20,7 @@ brew install --cask charles
 brew install --cask cleanshot
 brew install --cask clipgrab
 ##brew install --cask dash
+brew install --cask codex
 brew install --cask docker
 brew install --cask dotnet
 brew install --cask dropbox
