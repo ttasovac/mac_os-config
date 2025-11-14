@@ -6,8 +6,6 @@
 
 - [Manual setups](#manual-setups)
   - [Before install](#before-install)
-  - [zsh](#zsh)
-  - [Full access](#full-access)
   - [fish](#fish)
   - [SSH keys](#ssh-keys)
   - [mysql](#mysql)
@@ -18,6 +16,7 @@
   - [Redis](#redis)
   - [Issues with tide](#issues-with-tide)
   - [Misc](#misc)
+  - [dariah email](#dariah-email)
 
 <!-- /code_chunk_output -->
 
@@ -25,20 +24,14 @@
 
 - Install Github Desktop
   - sign in
-  - clone notes
+  - clone notes, mac-os-config and macos
 - Install VSCode
   - turn on cloud changes
   - sign in with github
-
-## zsh
-
-to make the rest of the script finish, we need this after installing brew
-
-`export PATH="/opt/homebrew/bin:$PATH" >> ~/.zshrc`
-
-## Full access
-
-- give Terminal app full access to disk in Privacy & Confidentiality / Disk Access (otherwise Safari, Mail etc. defualts won't write)
+- Install Xcode from AppStore
+- give Terminal app full access to disk in Privacy & Confidentiality / Disk Access (otherwise Safari, Mail etc. defaults won't write)
+- to make the rest of the script finish, we need this so that brew `echo export PATH="/opt/homebrew/bin:$PATH" >> ~/.zshrc`
+- for shell scripts to work, need to set up a ssh key and follow gh auth instructions below
 
 ## fish
 
@@ -204,3 +197,9 @@ then commit `fish_variables` once
 - set up Bartender
 - allow screen sharing: Apple menu > System Settings > General > Общий экран
 - maybe install X (doesn't work with mas install at the moment because it's an iPad app)
+- install MoneyMoney (pkg install seems not to have worked), then copy the db from an existing installation
+
+## dariah email
+
+- имя: Tomа Tasovac, адр. эл. почт. <toma.tasovac@dariah.eu>, имя пользователя: gwdg\ttasova
+-
