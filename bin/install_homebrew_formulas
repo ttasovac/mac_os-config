@@ -90,6 +90,9 @@ brew install icu4c
 # Java Environment
 brew install jenv
 
+# RelaxNG
+brew install jing-trang
+
 # JSON CLI Parser
 brew install jq
 

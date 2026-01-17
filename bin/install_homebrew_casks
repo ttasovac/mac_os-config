@@ -38,7 +38,8 @@ brew install --cask openrefine
 brew install --cask oxygen-xml-editor
 brew install --cask istat-menus
 # Java 8 (Eclipse Temurin)
-brew install --cask temurin@8
+#brew install --cask temurin@8
+brew install --cask temurin@17
 brew install --cask tropy
 brew install --cask kaleidoscope
 brew install --cask moneymoney
