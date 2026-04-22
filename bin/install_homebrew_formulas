@@ -24,6 +24,8 @@ brew install bash
 # Bash Completion
 brew install bash-completion
 
+brew install bat
+
 # Colorized Cat
 brew install ccat
 
